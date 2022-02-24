@@ -11,7 +11,7 @@ import {
     WayCome,
     RefundPolicy,
     SideNav,
-} from "Components/EduDetailComponent";
+} from "Components/EduDetail";
 
 const Section = styled.div`
     position: relative;

@@ -2,9 +2,9 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import styled from "styled-components";
 import SubTop from "Components/SubTop";
-import SubTitle from "Components/EduReviewComponent/SubTitle";
-import Slide from "Components/EduReviewComponent/Slide";
-import Board from "Components/EduReviewComponent/Board";
+import SubTitle from "Components/EduReview/SubTitle";
+import Slide from "Components/EduReview/Slide";
+import Board from "Components/EduReview/Board";
 import Form from "Routes/EduReviewForm";
 import ReviewDetail from "Routes/EduReviewDetail";
 

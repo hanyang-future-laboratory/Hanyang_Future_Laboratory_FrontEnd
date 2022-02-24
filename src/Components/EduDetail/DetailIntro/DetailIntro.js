@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 import styled from "styled-components";
-import SubTitle from "Components/EduDetailComponent/SubTitle";
+import SubTitle from "Components/EduDetail/SubTitle";
 
 const Section = styled.div`
   display: flex;

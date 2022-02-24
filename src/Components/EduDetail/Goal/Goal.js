@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import SubTitle from "Components/EduDetailComponent/SubTitle";
+import SubTitle from "Components/EduDetail/SubTitle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Box = styled.div`
     height: 130px;

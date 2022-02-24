@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import EditorComponent from "Components/EduReviewFormComponent/EditorComponent";
+import EditorComponent from "Components/EduReviewForm/EditorComponent";
 
 const Box = styled.div`
     width: 70vw;

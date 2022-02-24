@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 import styled from "styled-components";
-import SubTitle from "Components/EduDetailComponent/SubTitle";
+import SubTitle from "Components/EduDetail/SubTitle";
 
 const Section = styled.section`
   background-color: #f8f8f8;
