@@ -8,9 +8,19 @@ import EduRequest from "Routes/EduRequest";
 import Login from "Routes/Login";
 import Join from "Routes/Join";
 import ScrollToTop from "Routes/behavior/ScrollToTop";
-
 import Review from "Routes/EduReview";
+import FAQ from "Routes/FAQ";
+import ChannelService from "Components/ChatBot";
 
+ChannelService.boot({
+    pluginKey: "0f836e91-ac58-4e06-b9e4-faef0996d345",
+    memberId: "junbox98221",
+    profile: {
+        name: "익명",
+        email: "junbox98221",
+        id: "junbox98221",
+    },
+});
 const Router = () => (
     <BrowserRouter>
         <ScrollToTop />
@@ -23,6 +33,7 @@ const Router = () => (
             <Route path="/login" exact component={Login} />
             <Route path="/join" exact component={Join} />
             <Route path="/review" component={Review} />
+            <Route path="/FAQ" component={FAQ} />
             <Redirect from="*" to="/" />
         </Switch>
     </BrowserRouter>
