@@ -48,13 +48,13 @@ const LiTitle = styled.div`
 `;
 
 const Curriculum = forwardRef(({ CurriculumData }, ref) => {
-    const { subject, introduction, deployment, finish } = CurriculumData;
+    const { introduction, deployment, finish } = CurriculumData;
     return (
         <Section ref={ref}>
             <SubTitle title={"커리큘럼"} />
             <GridSection>
                 <Key>
-                    <div>{subject[0]}</div>
+                    <div>도입</div>
                 </Key>
                 <Value>
                     {introduction.map((item, index) =>
@@ -65,12 +65,14 @@ const Curriculum = forwardRef(({ CurriculumData }, ref) => {
                                 {item}
                             </LiTitle>
                         ) : (
-                            <Li key={index}>&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;{item}</Li>
+                            <Li key={index}>
+                                &nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;{item}
+                            </Li>
                         )
                     )}
                 </Value>
                 <Key>
-                    <div>{subject[1]}</div>
+                    <div>전개</div>
                 </Key>
                 <Value>
                     {deployment.map((item, index) =>
@@ -81,12 +83,14 @@ const Curriculum = forwardRef(({ CurriculumData }, ref) => {
                                 {item}
                             </LiTitle>
                         ) : (
-                            <Li key={index}>&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;{item}</Li>
+                            <Li key={index}>
+                                &nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;{item}
+                            </Li>
                         )
                     )}
                 </Value>
                 <Key>
-                    <div>{subject[2]}</div>
+                    <div>마무리</div>
                 </Key>
                 <Value>
                     {finish.map((item, index) =>
@@ -97,7 +101,9 @@ const Curriculum = forwardRef(({ CurriculumData }, ref) => {
                                 {item}
                             </LiTitle>
                         ) : (
-                            <Li key={index}>&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;{item}</Li>
+                            <Li key={index}>
+                                &nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;{item}
+                            </Li>
                         )
                     )}
                 </Value>

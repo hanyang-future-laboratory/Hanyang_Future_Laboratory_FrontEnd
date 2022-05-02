@@ -2,8 +2,7 @@ import styled from "styled-components";
 import SubTitle from "Components/EduDetail/SubTitle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Box = styled.div`
-    height: 130px;
-    width: 260px;
+    width: 300px;
     background-color: #f8f8f8;
     display: flex;
     justify-content: space-between;
@@ -13,6 +12,10 @@ const Box = styled.div`
     font-size: 14px;
     padding: 35px 40px;
     position: relative;
+    div {
+        text-align: center;
+        line-height: 150%;
+    }
 `;
 
 const Circle = styled.div`
@@ -30,13 +33,11 @@ const Circle = styled.div`
     font-size: 12px;
 `;
 
-const Goal = () => (
+const Goal = ({ content }) => (
     <>
         <SubTitle title={"수업 목표"} />
         <Box>
-            <div>4차 산업혁명의 핵심기술인</div>
-            <div>3D프린팅에 대해 알아보고,</div>
-            <div> 3D모델링 툴을 익혀본다.</div>
+            <div>{content} </div>
             <Circle>
                 <FontAwesomeIcon icon="check" />
             </Circle>

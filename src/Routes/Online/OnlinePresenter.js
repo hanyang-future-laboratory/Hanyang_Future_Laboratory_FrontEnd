@@ -109,6 +109,7 @@ const OnlinePresenter = ({
                     )
                     .map((item, index) => (
                         <EduList
+                            index={index}
                             key={index}
                             imgUrl={item.imgUrl}
                             type={item.type}

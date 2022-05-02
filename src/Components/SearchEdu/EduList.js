@@ -76,9 +76,18 @@ const Bar = styled(BarComponent)`
     height: 2px;
 `;
 
-const EduList = ({ imgUrl, type, title, target, result, cost1, cost2 }) => {
+const EduList = ({
+    index,
+    imgUrl,
+    type,
+    title,
+    target,
+    result,
+    cost1,
+    cost2,
+}) => {
     return (
-        <Poster to="/online/maker1">
+        <Poster to={`/online/${index}`}>
             <PosterImg src={require(`../../${imgUrl}`).default} alt="lecture" />
             <InfoSection>
                 <Type>

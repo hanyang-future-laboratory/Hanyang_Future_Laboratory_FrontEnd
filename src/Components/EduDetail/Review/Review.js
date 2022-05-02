@@ -52,7 +52,7 @@ const Img = styled.img`
     height: 40px;
 `;
 
-const Review = forwardRef(({ _ }, ref) => {
+const Review = forwardRef(({ review }, ref) => {
     return (
         <Section ref={ref}>
             <SubTitleLeftBar title="교육 후기" />
@@ -75,17 +75,9 @@ const Review = forwardRef(({ _ }, ref) => {
                     </Info>
                 </LeftSide>
                 <RightSide>
-                    <span>
-                        이번 캠프를 통해 직접 3D 프린팅을 해본 것이 가장 재밌었습니다.
-                    </span>
-                    <span>
-                        미래에는 사람들이 원하는 제품들을 프린터기로 뽑을 수 있다는게
-                        신기했습니다.
-                    </span>
-                    <span>
-                        3D 프린팅으로 만든 제품들도 직접 만져볼 수 있어서 좋았어요.
-                    </span>
-                    <span>캠프가 너무 빨리 지나간 것 같아요ㅠㅠ</span>
+                    {review.man.map((item, index) => (
+                        <span key={index}>{item}</span>
+                    ))}
                 </RightSide>
             </Box>
             <Box>
@@ -107,17 +99,9 @@ const Review = forwardRef(({ _ }, ref) => {
                     </Info>
                 </LeftSide>
                 <RightSide>
-                    <span>
-                        이번 캠프를 통해 직접 3D 프린팅을 해본 것이 가장 재밌었습니다.
-                    </span>
-                    <span>
-                        미래에는 사람들이 원하는 제품들을 프린터기로 뽑을 수 있다는게
-                        신기했습니다.
-                    </span>
-                    <span>
-                        3D 프린팅으로 만든 제품들도 직접 만져볼 수 있어서 좋았어요.
-                    </span>
-                    <span>캠프가 너무 빨리 지나간 것 같아요ㅠㅠ</span>
+                    {review.woman.map((item, index) => (
+                        <span key={index}>{item}</span>
+                    ))}
                 </RightSide>
             </Box>
         </Section>
