@@ -10,7 +10,10 @@ import Join from "Routes/Join";
 import ScrollToTop from "Routes/behavior/ScrollToTop";
 import Review from "Routes/EduReview";
 import FAQ from "Routes/FAQ";
+import Company from "Routes/Company";
+import History from "Routes/History";
 import ChannelService from "Components/ChatBot";
+import Field from "Routes/Field";
 
 ChannelService.boot({
     pluginKey: "0f836e91-ac58-4e06-b9e4-faef0996d345",
@@ -34,6 +37,9 @@ const Router = () => (
             <Route path="/join" exact component={Join} />
             <Route path="/review" component={Review} />
             <Route path="/FAQ" component={FAQ} />
+            <Route path="/company" exact component={Company} />
+            <Route path="/history" exact component={History} />
+            <Route path="/field" exact component={Field} />
             <Redirect from="*" to="/" />
         </Switch>
     </BrowserRouter>
