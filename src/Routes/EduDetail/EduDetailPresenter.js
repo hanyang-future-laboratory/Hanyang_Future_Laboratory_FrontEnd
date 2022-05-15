@@ -67,7 +67,7 @@ const EduDetailPresenter = ({ tabRef }) => {
                 <WayCome />
                 <RefundPolicy />
                 <SideNav ref={tabRef} />
-                <PaymentBtn>결제창 이동</PaymentBtn>
+                <PaymentBtn>교육 신청</PaymentBtn>
             </Page>
         </Section>
     );

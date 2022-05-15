@@ -125,13 +125,13 @@ const HeaderComponent = () => {
         },
         {
             HeaderTab: "교육 후기",
-            HeaderLinkTab: ["교육 후기", "캠프 만족도", "언론 보도"],
-            HeaderLinkUrl: ["/", "/", "/"],
+            HeaderLinkTab: ["교육 후기"],
+            HeaderLinkUrl: ["/review"],
         },
         {
             HeaderTab: "교육 문의",
             HeaderLinkTab: ["교육 문의", "자주하는 질문"],
-            HeaderLinkUrl: ["/", "/"],
+            HeaderLinkUrl: ["/", "/faq"],
         },
     ]);
 
