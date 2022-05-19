@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import BarComponent from "Components/Bar";
+import img from "img/subTopBack.jpg";
 
 const SubTopVariety = styled.div`
-  background-color: #fffabb;
+  background-image: url(${img});
   height: 55vh;
   padding: 120px 15vw;
   display: flex;
