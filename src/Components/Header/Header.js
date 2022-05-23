@@ -103,7 +103,7 @@ const HeaderComponent = () => {
         {
             HeaderTab: "법인 소개",
             HeaderLinkTab: ["법인 소개", "연혁", "사업 영역", "오시는 길"],
-            HeaderLinkUrl: ["/company", "/history", "/field", "/address"],
+            HeaderLinkUrl: ["/company", "/history", "/field", "/Address"],
         },
         {
             HeaderTab: "교육 소개",
