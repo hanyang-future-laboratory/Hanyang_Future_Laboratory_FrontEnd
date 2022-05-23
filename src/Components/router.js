@@ -15,6 +15,7 @@ import History from "Routes/History";
 import ChannelService from "Components/ChatBot";
 import Field from "Routes/Field";
 import Address from "Routes/Address";
+import eduForm from "Routes/EduForm";
 
 ChannelService.boot({
     pluginKey: "0f836e91-ac58-4e06-b9e4-faef0996d345",
@@ -42,6 +43,7 @@ const Router = () => (
             <Route path="/history" exact component={History} />
             <Route path="/field" exact component={Field} />
             <Route path="/Address" exact component={Address} />
+            <Route path="/eduForm" exact component={eduForm} />
             <Redirect from="*" to="/" />
         </Switch>
     </BrowserRouter>
