@@ -63,15 +63,15 @@ const WayCome = () => (
                 <Tab>
                     <Title>본사</Title>
                     <Place>
-                        <div>경기도 안산시 상록구 한양대학로 55 5공학관</div>
-                        <div>지하 1층 창업 1실</div>
+                        <div>경기도 안산시 상록구 한양대학로 55</div>
+                        <div>한양대학교</div>
                     </Place>
                 </Tab>
                 <Tab>
                     <Title>연구소</Title>
                     <Place>
-                        <div>경기도 안산시 초지동 신명트윈타워 A동5층</div>
-                        <div>(원포공원1로 59)</div>
+                        <div>경기도 안산시 상록구 한양대학로 55</div>
+                        <div>한양대학교</div>
                     </Place>
                 </Tab>
             </Info>
