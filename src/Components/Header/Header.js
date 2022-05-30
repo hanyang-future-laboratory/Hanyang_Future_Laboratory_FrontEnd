@@ -44,7 +44,8 @@ const Title = styled.div`
     color: var(--main-color);
     font-size: 33px;
     margin-left: 13px;
-    font-family: "Sunflower", sans-serif;
+    // font-family: "Sunflower", sans-serif;
+    font-family: 'Jua', sans-serif;
 `;
 
 const LoginAndJoin = styled.div`
