@@ -132,7 +132,7 @@ const HeaderComponent = () => {
         {
             HeaderTab: "교육 문의",
             HeaderLinkTab: ["교육 문의", "자주하는 질문"],
-            HeaderLinkUrl: ["/", "/faq"],
+            HeaderLinkUrl: ["/Inquire", "/faq"],
         },
     ]);
 
