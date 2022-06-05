@@ -61,6 +61,7 @@ const HelpText = styled.div`
         justify-content: center;
         letter-spacing: 0px;
         color: #000000;
+        line-height: 30px;
         span:first-child {
             font: normal normal normal 40px/55px AppleSDGothicNeoSB00;
         }
@@ -160,7 +161,7 @@ const FAQPresenter = ({}) => {
             title: "실시간 온라인 강의는 어떤 프로그램을 이용하여 진행되나요?",
             var: false,
             content:
-                "zoom을 이용하여 실시간 강의를 진행하고 있습니다. zoom 링크는 수업 전에 미리 보내드리며, 수업을 수강하시는 모든 학생분들이 간단한 zoom 사용법을 사전에 익히고 계셔야 합니다.",
+                "zoom을 이용하여 실시간 강의를 진행하고 있습니다. zoom 링크는 수업 전에 미리 보내드리며, <br> 수업을 수강하시는 모든 학생분들이 간단한 zoom 사용법을 사전에 익히고 계셔야 합니다.",
         },
         {
             title: "온라인 교육 교구는 추가 주문할 수 있나요?",
@@ -229,11 +230,11 @@ const FAQPresenter = ({}) => {
         <Wrap>
             <Board>
                 <Path>
-                    홈 &nbsp;&gt;&nbsp; 고객센터 &nbsp; &gt;&nbsp; 1:1 문의
+                    홈 &nbsp;&gt;&nbsp; 교육문의 &nbsp; &gt;&nbsp; 자주하는 질문
                 </Path>
                 <PostWrap>
                     <Text>
-                        <p> 자주 묻는 질문 </p>
+                        <p> 자주 묻는 질문 FAQ </p>
                         <p> 한양미래연구소에 궁금한 점이 있으신가요? </p>
                         <p> 자주 묻는 질문 FAQ 리스트를 확인해보세요. </p>
                     </Text>
