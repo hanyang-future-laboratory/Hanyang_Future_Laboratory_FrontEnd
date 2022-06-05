@@ -10,8 +10,3 @@ export const reviewApi = {
   reviewPost: (body) => api.post(`review/form`, { ...body }),
 };
 
-export const inquireApi = {
-  reviewBoard: () => api.get("EduInquire"),
-  reviewDetail: (id) => api.get(`EduInquire/${id}`),
-  reviewPost: (body) => api.post(`EduInquire/form`, { ...body }),
-};

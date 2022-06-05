@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import EduInquirePresenter from "./EduInquirePresenter";
-import { inquireApi } from "api";
+import { reviewApi } from "api";
 import { connect } from "react-redux";
 
 const EduInquireContainer = ({ updateCheck }) => {
@@ -17,7 +17,7 @@ const EduInquireContainer = ({ updateCheck }) => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const { data } = await inquireApi.reviewBoard();
+            const { data } = await reviewApi.reviewBoard();
             boardDataUpdate(data);
         };
         fetchData();
@@ -45,3 +45,4 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps)(EduInquireContainer);
+

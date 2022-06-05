@@ -1,3 +1,3 @@
-import EduInquireContainer from "./EduInquireContainer";
+import EduInquire from "./EduInquireContainer";
 
-export default EduInquireContainer;
+export default EduInquire;

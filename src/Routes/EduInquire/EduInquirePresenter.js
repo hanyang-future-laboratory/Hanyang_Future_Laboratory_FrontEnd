@@ -3,8 +3,8 @@ import { Route, Switch } from "react-router-dom";
 import styled from "styled-components";
 import SubTop from "Components/SubTop";
 import SubTitle from "Components/EduReview/SubTitle";
-import Board from "Components/Board";
-import Form from "Routes/EduInquireForm";
+import Board from "Components/EduReview/Board";
+import Form from "Routes/EduReviewForm";
 import ReviewDetail from "Routes/EduReviewDetail";
 
 const Box = styled.div`
@@ -35,8 +35,8 @@ const EduInquirePresenter = ({
                     )}
                 />
                 <Switch>
-                    <Route path="/EduInquire/form" component={Form} />
-                    <Route path="/EduInquire/:id" component={ReviewDetail} />
+                    <Route path="/review/form"  component={Form} />
+                    <Route path="/review/:id" component={ReviewDetail} />
                 </Switch>
             </Box>
         </>
