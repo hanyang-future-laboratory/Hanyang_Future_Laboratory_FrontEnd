@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Modal from 'react-modal';
 import styled from "styled-components"
 import "./Form.css";
@@ -175,7 +176,9 @@ function Form() {
           <Li>소비자의 불만 또는 분쟁처리에 관한 기록: 3년 (전자상거래 등에서의 소비자보호에 관한 법률)</Li>
         </Ul>
       </Modal>
-      <Button type="submit">작성완료</Button>
+      <Link to="/">
+        <Button>작성완료</Button>
+      </Link>
 
     </Div>
   )
