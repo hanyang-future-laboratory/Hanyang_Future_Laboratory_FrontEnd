@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom';
 import styled from "styled-components";
 
 const Button = styled.button`
@@ -14,9 +14,15 @@ border-radius: 20px;
 font-size: 20px;
 `;
 
+
 const Buttons = ({ title }) => (
-    <Button type="button" onclick="location.href='#';">{title}</Button>
+    <Link to="./EduInquire">
+        <Button>{title}</Button>
+    </Link>
+    
 );
+
+
 
 export default Buttons;
 

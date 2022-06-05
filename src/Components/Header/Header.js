@@ -244,7 +244,7 @@ const HeaderComponent = () => {
                             onMouseEnter={mouseEnter4}
                             onMouseLeave={mouseLeave4}
                         >
-                            <MSLink to="/">
+                            <MSLink to="/review">
                                 <div>{data[3].HeaderTab}</div>
                             </MSLink>
                             <HeaderLink
@@ -260,7 +260,7 @@ const HeaderComponent = () => {
                             onMouseEnter={mouseEnter5}
                             onMouseLeave={mouseLeave5}
                         >
-                            <MSLink to="/">
+                            <MSLink to="Inquire">
                                 <div>{data[4].HeaderTab}</div>
                             </MSLink>
                             <HeaderLink
