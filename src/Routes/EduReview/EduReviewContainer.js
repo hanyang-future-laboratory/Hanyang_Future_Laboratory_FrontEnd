@@ -7,7 +7,7 @@ const EduReviewContainer = ({ updateCheck }) => {
     const [subTopData] = useState({
         title: "교육 후기",
         smallTitle: "Education Review",
-        subTitle1: "한양 미래 연구소에서 진행되었던 교육을 들은",
+        subTitle1: "구름 다리에서 진행되었던 교육을 들은",
         subTitle2: "학생들과 학부모님들의 리얼 후기입니다.",
     });
 

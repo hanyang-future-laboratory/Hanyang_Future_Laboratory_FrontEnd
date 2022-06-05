@@ -84,6 +84,7 @@ function Form() {
     background-color: var(--sub-color);
     border: 0;
     margin-bottom: 150px;
+    border-radius: 20px;
   `;
 
 

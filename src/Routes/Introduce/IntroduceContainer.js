@@ -68,7 +68,7 @@ const Introduce = () => {
         title: "교육 소개",
         smallTitle: "Education Introduction",
         subTitle1: "4차산업혁명시대를 이끌어 나갈 인재를 양성하는",
-        subTitle2: "한양미래연구소의 교육 프로그램입니다.",
+        subTitle2: "구름다리의 교육 프로그램입니다.",
     });
 
     return <IntroducePresenter data={data} subTopData={subTopData} />;

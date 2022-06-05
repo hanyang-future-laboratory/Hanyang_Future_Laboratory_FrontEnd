@@ -196,7 +196,7 @@ const FAQPresenter = ({}) => {
         {
             title: "궁금한 점은 어디로 문의하면 되나요?",
             var: false,
-            content: "문의 : 한양미래연구소 (하이쓰리디) 070-8064-0829",
+            content: "문의 : 구름다리 000-0000-0000",
         },
     ]);
 
@@ -235,7 +235,7 @@ const FAQPresenter = ({}) => {
                 <PostWrap>
                     <Text>
                         <p> 자주 묻는 질문 FAQ </p>
-                        <p> 한양미래연구소에 궁금한 점이 있으신가요? </p>
+                        <p> 구름다리에 궁금한 점이 있으신가요? </p>
                         <p> 자주 묻는 질문 FAQ 리스트를 확인해보세요. </p>
                     </Text>
                     <PosterBlock />
@@ -244,7 +244,7 @@ const FAQPresenter = ({}) => {
             <HelpWrap>
                 <HelpText>
                     <span>원하는 답변을 찾기 어려우신가요?</span>
-                    <span>한양미래연구소에게 직접 문의 해주세요</span>
+                    <span>구름다리에게 직접 문의 해주세요</span>
                     <span>최대한 빠르게 도와드리겠습니다!</span>
                     <HelpBtn to="/inquiry">
                         <p>1:1 문의 하기</p>
