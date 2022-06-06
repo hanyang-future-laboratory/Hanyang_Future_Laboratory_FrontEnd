@@ -9,7 +9,7 @@ const SubTop = styled.div`
     border: 1px solid rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     display: grid;
-    grid-template-rows: 1.8fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1.8fr 1fr 1fr 1fr 1fr 1fr;
     height: 250px;
     width: 120px;
     overflow: hidden;
@@ -66,7 +66,7 @@ const SubTopComponent = forwardRef(({ tabRef }, ref) => {
             </Li>
             <Li
                 onClick={() =>
-                    ref.current[3].scrollIntoView({ behavior: "smooth" })
+                    ref.current[4].scrollIntoView({ behavior: "smooth" })
                 }
             >
                 교육 신청
