@@ -12,26 +12,44 @@ const Section = styled.section`
 `;
 
 const LoginContainer = styled.form`
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
     background: white;
     width: 500px;
-    height: 600px;
+    height: 500px;
+    align-items: center;
 `;
 const Input = styled.input`
-    border: 1px solid black;
-    width: 200px;
-    height: 100px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    width: 85%;
+    height: 50px;
+    padding-left: 10px;
 `;
 
 const Submit = styled.input`
-    border: 1px solid black;
-    width: 200px;
-    height: 100px;
+    border: 0;
+    text-align: center;
+    width: 85%;
+    height: 50px;
     background: #11ab69;
     color: white;
+    margin-top: auto;
+    margin-bottom: 50px;
+`;
+
+const Title = styled.div`
+    font-size: 25px;
+    padding-top: 40px;
+`;
+const SubTitle = styled.div`
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 13px;
+`;
+const Type = styled.div`
+    float: left;
+    width: 85%;
 `;
 
 const OnlinePresenter = ({ history }) => {
@@ -39,7 +57,6 @@ const OnlinePresenter = ({ history }) => {
     const [password, setPassword] = useState("");
     const submitHander = async () => {
         try {
-            console.log("login");
             const body = { username: id, password };
             const response = await loginApi.login(body);
             const token = response.data.token;
@@ -53,6 +70,12 @@ const OnlinePresenter = ({ history }) => {
     return (
         <Section>
             <LoginContainer method="POST">
+                <Title>로그인</Title>
+                <SubTitle>
+                    로그인 아이디와 비밀번호 입력하신 후 '로그인' 버튼을
+                    클릭하세요.
+                </SubTitle>
+                <Type>아이디</Type>
                 <Input
                     placeholder="User ID"
                     name="username"
@@ -61,6 +84,7 @@ const OnlinePresenter = ({ history }) => {
                     onChange={(e) => setId(e.target.value)}
                     required
                 />
+                <Type>비밀번호</Type>
                 <Input
                     placeholder="Password"
                     name="password"
