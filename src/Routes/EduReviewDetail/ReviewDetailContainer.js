@@ -10,8 +10,12 @@ const EduReviewContainer = ({ match }) => {
     const [reviewData, reviewUpdate] = useState();
     useEffect(() => {
         const fetchData = async () => {
-            const { data } = await reviewApi.reviewDetail(id);
-            reviewUpdate(data);
+            try {
+                const { data } = await reviewApi.reviewDetail(id);
+                reviewUpdate(data);
+            } catch (e) {
+                console.log(e);
+            }
         };
         fetchData();
     }, [id]);

@@ -45,7 +45,7 @@ const Title = styled.div`
     font-size: 33px;
     margin-left: 13px;
     // font-family: "Sunflower", sans-serif;
-    font-family: 'Jua', sans-serif;
+    font-family: "Jua", sans-serif;
 `;
 
 const LoginAndJoin = styled.div`
@@ -183,8 +183,8 @@ const HeaderComponent = () => {
                         <Title>구름다리</Title>
                     </LogoAndTitle>
                     <LoginAndJoin>
-                        <Login to="/">로그인</Login>
-                        <Join to="/">회원가입</Join>
+                        <Login to="/login">로그인</Login>
+                        <Join to="/register">회원가입</Join>
                     </LoginAndJoin>
                 </NavBarHeader>
             ) : null}

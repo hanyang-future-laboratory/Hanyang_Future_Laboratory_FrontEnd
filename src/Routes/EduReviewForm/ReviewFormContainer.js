@@ -18,7 +18,7 @@ const EduReviewContainer = ({ history, newReviewAction }) => {
     ]);
     const [title, updateTitle] = useState("");
     const [main, updateMain] = useState("");
-    const [category, updateCategory] = useState("청소년 캠프");
+    const [category, updateCategory] = useState("Camp");
     const [secret, updateSecret] = useState(false);
 
     const onChangeTitle = (e) => {
@@ -44,12 +44,10 @@ const EduReviewContainer = ({ history, newReviewAction }) => {
 
     const submitHandler = async (e) => {
         e.preventDefault();
-        console.log(main);
         const body = {
             title,
-            main,
+            content: main,
             category,
-            secret,
         };
         try {
             await reviewApi.reviewPost(body);

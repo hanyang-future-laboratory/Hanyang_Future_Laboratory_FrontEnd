@@ -30,20 +30,23 @@ const EduReviewContainer = ({ updateCheck }) => {
     ]);
 
     const [boardData, boardDataUpdate] = useState();
-    const [buttonSelect, setButtonSelect] = useState([1, 0, 0, 0, 0]);
+    const [buttonSelect, setButtonSelect] = useState("All");
 
     useEffect(() => {
         const fetchData = async () => {
-            const { data } = await reviewApi.reviewBoard();
-            boardDataUpdate(data);
+            try {
+                const { data } = await reviewApi.reviewBoard();
+                console.log(data);
+                boardDataUpdate(data);
+            } catch (e) {
+                console.log(e);
+            }
         };
         fetchData();
     }, [updateCheck]);
 
-    const typeHandler = (index) => {
-        let arr = [0, 0, 0, 0, 0];
-        arr[index] = 1;
-        setButtonSelect(arr);
+    const typeHandler = (category) => {
+        setButtonSelect(category);
     };
 
     return (

@@ -145,7 +145,6 @@ const Input = styled.input`
     }
 `;
 const EduReivewPresenter = ({ reviewData }) => {
-    console.log(reviewData);
     return (
         <Box>
             {reviewData ? (
@@ -171,7 +170,9 @@ const EduReivewPresenter = ({ reviewData }) => {
                     </Row>
                     <Row>
                         <MainReview
-                            dangerouslySetInnerHTML={{ __html: reviewData.main }}
+                            dangerouslySetInnerHTML={{
+                                __html: reviewData.main,
+                            }}
                         />
                         <MiddleBorder />
                     </Row>

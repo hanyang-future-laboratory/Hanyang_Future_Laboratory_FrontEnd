@@ -121,32 +121,32 @@ const SubTitle = ({ boardData, buttonSelect, typeHandler }) => {
         <Board>
             <CategoryArea>
                 <Category
-                    focuscheck={buttonSelect[0]}
-                    onClick={() => typeHandler(0)}
+                    focuscheck={buttonSelect === "All"}
+                    onClick={() => typeHandler("All")}
                 >
                     전체
                 </Category>
                 <Category
-                    focuscheck={buttonSelect[1]}
-                    onClick={() => typeHandler(1)}
-                >
-                    청소년 캠프
-                </Category>
-                <Category
-                    focuscheck={buttonSelect[2]}
-                    onClick={() => typeHandler(2)}
-                >
-                    찾아가는 체험교실
-                </Category>
-                <Category
-                    focuscheck={buttonSelect[3]}
-                    onClick={() => typeHandler(3)}
+                    focuscheck={buttonSelect === "Dongari"}
+                    onClick={() => typeHandler("Dongari")}
                 >
                     청소년 동아리
                 </Category>
                 <Category
-                    focuscheck={buttonSelect[4]}
-                    onClick={() => typeHandler(4)}
+                    focuscheck={buttonSelect === "Camp"}
+                    onClick={() => typeHandler("Camp")}
+                >
+                    청소년 캠프
+                </Category>
+                <Category
+                    focuscheck={buttonSelect === "Class"}
+                    onClick={() => typeHandler("Class")}
+                >
+                    찾아가는 체험교실
+                </Category>
+                <Category
+                    focuscheck={buttonSelect === "Professional"}
+                    onClick={() => typeHandler("Professional")}
                 >
                     전문인 특강 / 창의체험부스
                 </Category>
@@ -157,13 +157,25 @@ const SubTitle = ({ boardData, buttonSelect, typeHandler }) => {
                 <Writer>작성자</Writer>
             </BoardTop>
             {boardData
-                ? boardData.map((item, index) => (
-                      <Content key={index} to={`review/${item._id}`}>
-                          <Index>{index + 1}</Index>
-                          <Title>{item.title}</Title>
-                          <Writer>경기도 모 고등학생</Writer>
-                      </Content>
-                  ))
+                ? boardData.map((item, index) => {
+                      if (buttonSelect === "All")
+                          return (
+                              <Content key={index} to={`review/${item.id}`}>
+                                  <Index>{index + 1}</Index>
+                                  <Title>{item.title}</Title>
+                                  <Writer>{item.name}</Writer>
+                              </Content>
+                          );
+                      else if (buttonSelect === item.category) {
+                          return (
+                              <Content key={index} to={`review/${item.id}`}>
+                                  <Index>{index + 1}</Index>
+                                  <Title>{item.title}</Title>
+                                  <Writer>{item.name}</Writer>
+                              </Content>
+                          );
+                      } else return null;
+                  })
                 : null}
             <ButtonArea>
                 <Form>

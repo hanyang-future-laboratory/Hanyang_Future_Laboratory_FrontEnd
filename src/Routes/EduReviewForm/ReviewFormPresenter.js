@@ -103,12 +103,10 @@ const EduReivewPresenter = ({
                         value={category}
                         onChange={onChangeCategory}
                     >
-                        <option value="청소년 캠프">청소년 캠프</option>
-                        <option value="찾아가는 체험교실">
-                            찾아가는 체험교실
-                        </option>
-                        <option value="청소년 동아리">청소년 동아리</option>
-                        <option value="전문인 특강 / 창의 체험 캠프">
+                        <option value="Camp">청소년 캠프</option>
+                        <option value="Class">찾아가는 체험교실</option>
+                        <option value="Dongari">청소년 동아리</option>
+                        <option value="Professional">
                             전문인 특강 / 창의 체험 캠프
                         </option>
                     </Select>

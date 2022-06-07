@@ -17,6 +17,7 @@ import Field from "Routes/Field";
 import Address from "Routes/Address";
 import eduForm from "Routes/EduForm";
 import Inquire from "Routes/Inquire";
+import Register from "Routes/Register";
 import EduInquire from "Routes/EduInquire";
 
 ChannelService.boot({
@@ -48,6 +49,7 @@ const Router = () => (
             <Route path="/eduForm" exact component={eduForm} />
             <Route path="/Inquire" exact component={Inquire} />
             <Route path="/EduInquire" exact component={EduInquire} />
+            <Route path="/register" exact component={Register} />
             <Redirect from="*" to="/" />
         </Switch>
     </BrowserRouter>
