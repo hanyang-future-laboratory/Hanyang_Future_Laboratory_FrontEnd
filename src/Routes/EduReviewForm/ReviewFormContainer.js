@@ -28,7 +28,6 @@ const EduReviewContainer = ({ history, newReviewAction }) => {
         updateTitle(value);
     };
     const onChangeMain = (value) => {
-        console.log(main);
         updateMain(value);
     };
     const onChangeCategory = (e) => {
@@ -52,10 +51,10 @@ const EduReviewContainer = ({ history, newReviewAction }) => {
         try {
             await reviewApi.reviewPost(body);
             newReviewAction();
+            history.push("/review");
         } catch (e) {
             console.log(e);
-        } finally {
-            history.push("/review");
+            alert("정상적으로 등록되지 않았습니다.");
         }
     };
     return (

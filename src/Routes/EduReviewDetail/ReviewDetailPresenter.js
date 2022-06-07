@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { reviewApi } from "api";
+import { withRouter } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { actionCreators } from "store";
 
 const Box = styled.div`
     width: 70vw;
@@ -144,7 +148,40 @@ const Input = styled.input`
         text-align: center;
     }
 `;
-const EduReivewPresenter = ({ reviewData }) => {
+
+const HandleButton = styled.button`
+    background: var(--main-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    outline: 0;
+    border: 0;
+    display: inline-block;
+    margin-left: 50px;
+    float: right;
+    height: 40px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    &:hover {
+        color: black;
+    }
+`;
+const EduReivewPresenter = ({ history, location, reviewData, id }) => {
+    const dispatch = useDispatch();
+
+    const deleteHandler = async () => {
+        try {
+            const result = await reviewApi.reviewDelete(id);
+            history.push("/review");
+            dispatch(actionCreators.newReviewAction());
+            console.log(result);
+        } catch (e) {
+            console.log(e);
+            alert("삭제할 수 없습니다");
+        }
+    };
     return (
         <Box>
             {reviewData ? (
@@ -157,7 +194,7 @@ const EduReivewPresenter = ({ reviewData }) => {
                     <Row>
                         <Writer>
                             작성자
-                            <p>경기도 모 고등학생</p>
+                            <p>{reviewData.name}</p>
                         </Writer>
                     </Row>
                     <MiddleBorder />
@@ -171,7 +208,7 @@ const EduReivewPresenter = ({ reviewData }) => {
                     <Row>
                         <MainReview
                             dangerouslySetInnerHTML={{
-                                __html: reviewData.main,
+                                __html: reviewData.content,
                             }}
                         />
                         <MiddleBorder />
@@ -212,8 +249,10 @@ const EduReivewPresenter = ({ reviewData }) => {
                     </Row>
                 </Container>
             ) : null}
+
+            <HandleButton onClick={deleteHandler}>삭제하기</HandleButton>
         </Box>
     );
 };
 
-export default EduReivewPresenter;
+export default withRouter(EduReivewPresenter);

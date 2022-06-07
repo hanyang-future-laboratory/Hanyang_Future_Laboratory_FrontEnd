@@ -160,7 +160,10 @@ const RegisterPresenter = ({ subTopData }) => {
         try {
             const response = await registerApi.register(body);
             console.log(response);
-        } catch (e) {}
+        } catch (e) {
+            console.log(e);
+            alert("다시 시도해 주세요");
+        }
     };
 
     return (

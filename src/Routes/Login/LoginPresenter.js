@@ -1,5 +1,6 @@
 import { loginApi } from "api";
 import React, { useState } from "react";
+import { withRouter } from "react-router-dom";
 import styled from "styled-components";
 
 const Section = styled.section`
@@ -33,7 +34,7 @@ const Submit = styled.input`
     color: white;
 `;
 
-const OnlinePresenter = () => {
+const OnlinePresenter = ({ history }) => {
     const [id, setId] = useState("");
     const [password, setPassword] = useState("");
     const submitHander = async () => {
@@ -41,8 +42,11 @@ const OnlinePresenter = () => {
             console.log("login");
             const body = { username: id, password };
             const response = await loginApi.login(body);
-            console.log(response);
+            const token = response.data.token;
+            localStorage.setItem("jwtToken", token);
+            history.push("/");
         } catch (e) {
+            alert("다시 시도해 주세요");
             console.log(e);
         }
     };
@@ -71,4 +75,4 @@ const OnlinePresenter = () => {
     );
 };
 
-export default OnlinePresenter;
+export default withRouter(OnlinePresenter);

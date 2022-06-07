@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import "CSS/fonts.css";
@@ -173,6 +173,8 @@ const HeaderComponent = () => {
         let data = useScroll();
         return data < 200 ? true : false;
     };
+    const [, updateState] = useState();
+    const forceUpdate = useCallback(() => updateState({}, []));
 
     return (
         <NavBar>
@@ -182,10 +184,21 @@ const HeaderComponent = () => {
                         <MainLogo src={mainLogo} alt="main_logo" />
                         <Title>구름다리</Title>
                     </LogoAndTitle>
-                    <LoginAndJoin>
-                        <Login to="/login">로그인</Login>
-                        <Join to="/register">회원가입</Join>
-                    </LoginAndJoin>
+                    {window.localStorage.getItem("jwtToken") ? (
+                        <LoginAndJoin
+                            onClick={() => {
+                                window.localStorage.clear();
+                                forceUpdate();
+                            }}
+                        >
+                            로그아웃
+                        </LoginAndJoin>
+                    ) : (
+                        <LoginAndJoin>
+                            <Login to="/login">로그인</Login>
+                            <Join to="/register">회원가입</Join>
+                        </LoginAndJoin>
+                    )}
                 </NavBarHeader>
             ) : null}
             <NavBarWrap>
